@@ -71,7 +71,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: haswanth04/k8-backend:latest  # <-- change this
+          image: haswanth04/2300032751-lab-backend:latest  # <-- change this
           ports:
             - containerPort: 2000
 ---
@@ -87,7 +87,7 @@ spec:
     - protocol: TCP
       port: 2000
       targetPort: 2000
-      nodePort: 30025        # Optional fixed NodePort (range 30000–32767)
+      nodePort: 30072        # Optional fixed NodePort (range 30000–32767)
   type: NodePort
 ---
 # ===========================
@@ -110,7 +110,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: haswanth04/k8-frontend:latest  # <-- change this
+          image: haswanth04/2300032751-lab-frontend:latest  # <-- change this
           ports:
             - containerPort: 80
 ---
@@ -126,5 +126,5 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 80
-      nodePort: 30080        # Optional fixed NodePort (range 30000–32767)
+      nodePort: 30071       # Optional fixed NodePort (range 30000–32767)
   type: NodePort
